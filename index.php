@@ -2,15 +2,19 @@
 require_once('functions.php');
 $cars[0]['year'] = 2001 ;
 $cars[0]['SPZ'] = "1A5 4806" ;
+$cars[0]['engine'] = 890;
 $cars[1]['year'] = 1945 ;
 $cars[1]['SPZ'] = "NO SPZ" ;
+$cars[1]['engine'] = 750;
 $cars[2]['year'] = 2020 ;
 $cars[2]['SPZ'] = "1YS 1288" ;
+$cars[2]['engine'] = 4500;
 $cars[3]['year'] = 1985 ;
 $cars[3]['SPZ'] = "3SY 2689" ;
+$cars[3]['engine'] = 1500;
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,7 +25,8 @@ $cars[3]['SPZ'] = "3SY 2689" ;
     <?php
     for ($i=0; $i < count($cars); $i++) { 
         echo $cars[$i]['SPZ'] . " : ";
-        getCarInfo($cars[$i]['year']); ?>
+        getCarInfo($cars[$i]['year']); 
+        getTax($cars[$i]['engine']); ?>
         <br> <?php
     }
     ?>
